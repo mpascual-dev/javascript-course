@@ -34,6 +34,16 @@ console.log('Checked button clicked');
 const guess = Number (document.querySelector('.guess').value);
 console.log('Player Guessed:',guess);
 
+if (!guess && guess === 0) {
+    document.querySelector('.message').textContent = 'Please Input a Number !';
+    return; 
+}
+//input validation
+if (guess < 1 || guess > 20) {
+    document.querySelector('.message').textContent = 'Number must be between 1 and 20';
+    return; 
+}
+
 if (guess === secretNumber) {
     // When player wins
     console.log('Correct Guess!!!');
@@ -45,7 +55,8 @@ if (guess === secretNumber) {
     document.querySelector('.guess').disabled = true; 
     document.querySelector('.check').disabled = true;
     document.querySelector('.message').textContent = '🎉 You Won!!';
-
+document.querySelector('body').style.backgroundColor = 'green';
+document.querySelector('.guess').value = '';
 } else if (guess > secretNumber) {
     // When guess is too high
     console.log('Too High!!!');
@@ -53,10 +64,12 @@ if (guess === secretNumber) {
     score--;
     document.querySelector('.score').textContent = score;
     if (score < 1) {
-        document.querySelector('.message').textContent = '💥 You Lost The Game!!!';
+        document.querySelector('.message').textContent = '💥Game Over Please Press Again!';
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('.guess').disabled = true; 
         document.querySelector('.check').disabled = true;
+        document.body.style.backgroundColor = 'red';
+        document.querySelector('.guess').value = '';
     }
 } else if (guess < secretNumber) {
     // When guess is too low
@@ -65,10 +78,12 @@ if (guess === secretNumber) {
     score--;
     document.querySelector('.score').textContent = score;
     if (score < 1) {
-        document.querySelector('.message').textContent = '💥 You Lost The Game!!!';
+        document.querySelector('.message').textContent = 'Game Over Please Press Again!';
         document.querySelector('.number').textContent = secretNumber;
         document.querySelector('.guess').disabled = true; 
         document.querySelector('.check').disabled = true;
+        document.body.style.backgroundColor = 'red';
+
     }
 }})
 
@@ -87,4 +102,6 @@ document.querySelector('.guess').value = '';
 //enable the guess input field and check button
 document.querySelector('.guess').disabled = false; 
 document.querySelector('.check').disabled = false;
+        document.body.style.backgroundColor = '';
+
 });
