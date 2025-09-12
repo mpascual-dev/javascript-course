@@ -51,4 +51,4 @@ if (guess === secretNumber) {
     document.querySelector('.message').textContent = '💥 Too Low!!!';
     score--;
     document.querySelector('.score').textContent = score;
-}
+}})
