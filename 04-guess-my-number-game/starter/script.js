@@ -37,18 +37,54 @@ console.log('Player Guessed:',guess);
 if (guess === secretNumber) {
     // When player wins
     console.log('Correct Guess!!!');
-    document.querySelector('.message').textContent = '🎉 Correct Number';
     document.querySelector('.number').textContent = secretNumber;
+    if (score > highscore) {
+        highscore = score;
+        document.querySelector('.highscore').textContent = highscore;
+    }
+    document.querySelector('.guess').disabled = true; 
+    document.querySelector('.check').disabled = true;
+    document.querySelector('.message').textContent = '🎉 You Won!!';
+
 } else if (guess > secretNumber) {
     // When guess is too high
     console.log('Too High!!!');
     document.querySelector('.message').textContent = 'Too High!!';
     score--;
     document.querySelector('.score').textContent = score;
+    if (score < 1) {
+        document.querySelector('.message').textContent = '💥 You Lost The Game!!!';
+        document.querySelector('.number').textContent = secretNumber;
+        document.querySelector('.guess').disabled = true; 
+        document.querySelector('.check').disabled = true;
+    }
 } else if (guess < secretNumber) {
     // When guess is too low
     console.log('Too Low!!!');
     document.querySelector('.message').textContent = '💥 Too Low!!!';
     score--;
     document.querySelector('.score').textContent = score;
+    if (score < 1) {
+        document.querySelector('.message').textContent = '💥 You Lost The Game!!!';
+        document.querySelector('.number').textContent = secretNumber;
+        document.querySelector('.guess').disabled = true; 
+        document.querySelector('.check').disabled = true;
+    }
 }})
+
+/////////////////////
+document.querySelector('.again').addEventListener('click', function() {
+//code block
+score = 20;
+secretNumber = Math.trunc(Math.random() * 20) + 1;
+document.querySelector('.message').textContent = 'Start guessing...';
+//restart secret number display
+document.querySelector('.number').textContent = '?';
+//restart the score
+document.querySelector('.score').textContent = score;
+//empty the guess input field
+document.querySelector('.guess').value = '';
+//enable the guess input field and check button
+document.querySelector('.guess').disabled = false; 
+document.querySelector('.check').disabled = false;
+});
