@@ -11,9 +11,9 @@ function addDecl (a, b ) {
   return a + b;
 }
 
-cont addExpr = function (a, b) {
+const addExpr = function (a, b) {
     return a + b;
 };
 
-conts addArrow = (a, b) => a + b;
+const addArrow = (a, b) => a + b;
 
