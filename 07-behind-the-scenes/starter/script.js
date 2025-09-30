@@ -1,1 +1,19 @@
 'use strict';
+console.log(varX)
+//console.log(letX)
+//console.log(constX)
+var varX = 1;
+let letX = 2;
+const constX = 3;
+console.log(addDecl(5, 3));
+console.log(addExpr(5, 3));
+function addDecl (a, b ) {
+  return a + b;
+}
+
+cont addExpr = function (a, b) {
+    return a + b;
+};
+
+conts addArrow = (a, b) => a + b;
+
