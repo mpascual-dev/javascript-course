@@ -30,32 +30,65 @@ By the end of this course, you'll have created:
 
 ```
 javascript-course/
-├── 01-fundamentals-part-1/          📚 Session 1: Variables & Data Types
+├── README.md
+├── .gitignore
+│
+├── 01-fundamentals-part-1/
 │   └── starter/
 │       ├── index.html
 │       ├── script.js
-│       └── README.md
+│       └── docs/
+│           ├── 01_javascript_setup_and_basics.md
+│           ├── 02_operators_and_expressions.md
+│           ├── 03_strings_and_decisions.md
+│           └── 04_advanced_concepts_and_practice.md
 │
-├── 02-fundamentals-part-2/          📚 Session 2: Operators & Expressions
+├── 02-fundamentals-part-2/
 │   └── starter/
 │       ├── index.html
 │       ├── script.js
-│       └── README.md
+│       └── docs/
 │
-├── 03-fundamentals-part-3/          📚 Session 3: Strings & Decisions
+├── 03-developer-skills/
+│   └── starter/
+│       ├── .prettierrc
+│       ├── index.html
+│       ├── script.js
+│       └── docs/
+│
+├── 04-guess-my-number-game/
 │   └── starter/
 │       ├── index.html
 │       ├── script.js
-│       └── README.md
+│       ├── style.css
+│       └── docs/
 │
-├── 04-fundamentals-part-4/          📚 Session 4: Advanced Concepts
+├── 05-modal/
 │   └── starter/
 │       ├── index.html
 │       ├── script.js
-│       └── README.md
+│       ├── style.css
+│       └── docs/
 │
-├── README.md                        📖 This file - course overview
-└── .gitignore                       🚫 Git ignore file
+├── 06-pig-game/
+│   └── starter/
+│       ├── index.html
+│       ├── script.js
+│       ├── style.css
+│       └── docs/
+│
+├── 07-behind-the-scenes/
+│   └── starter/
+│       ├── index.html
+│       ├── script.js
+│       └── docs/
+│
+└── 08-mapty/
+    └── starter/
+        ├── index.html
+        ├── script.js
+        ├── style.css
+        └── docs/                     🚫 Git ignore file
 ```
 
 ---
