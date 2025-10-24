@@ -215,7 +215,7 @@ javascript-course/
 - Git & GitHub Account  
 
 ### Setup Instructions
-
+```
 git clone [repository-url] javascript-course
 cd javascript-course
 Open the desired module folder in VS Code
