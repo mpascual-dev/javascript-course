@@ -221,7 +221,7 @@ cd javascript-course
 Open the desired module folder in VS Code
 
 Run index.html in browser
-
+```
 Use Developer Tools (F12) for debugging
 ```
  📊 Progress Tracking
